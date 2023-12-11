@@ -32,22 +32,22 @@ class HouseService
         if ($filterDTO->name) {
             $builder->where('name', 'LIKE', "%$filterDTO->name%");
         }
-        if ($filterDTO->price_from) {
+        if ($filterDTO->price_from !== null) {
             $builder->where('price', '>', $filterDTO->price_from);
         }
-        if ($filterDTO->price_to) {
+        if ($filterDTO->price_to !== null) {
             $builder->where('price', '<', $filterDTO->price_to);
         }
-        if ($filterDTO->garages) {
+        if ($filterDTO->garages !== null) {
             $builder->where('garages', $filterDTO->garages);
         }
-        if ($filterDTO->bedrooms) {
+        if ($filterDTO->bedrooms !== null) {
             $builder->where('bedrooms', $filterDTO->bedrooms);
         }
-        if ($filterDTO->bathrooms) {
+        if ($filterDTO->bathrooms !== null) {
             $builder->where('bathrooms', $filterDTO->bathrooms);
         }
-        if ($filterDTO->storeys) {
+        if ($filterDTO->storeys !== null) {
             $builder->where('storeys', $filterDTO->storeys);
         }
     }

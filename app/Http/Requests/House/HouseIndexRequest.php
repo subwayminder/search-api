@@ -28,13 +28,13 @@ class HouseIndexRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'string|max:100',
-            'price_from' => 'integer',
-            'price_to' => 'integer',
-            'bedrooms' => 'integer',
-            'bathrooms' => 'integer',
-            'storeys' => 'integer',
-            'garages' => 'integer',
+            'name' => 'string|max:100|nullable',
+            'price_from' => 'integer|nullable',
+            'price_to' => 'integer|nullable',
+            'bedrooms' => 'integer|nullable',
+            'bathrooms' => 'integer|nullable',
+            'storeys' => 'integer|nullable',
+            'garages' => 'integer|nullable',
         ];
     }
 }
